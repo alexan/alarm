@@ -33,7 +33,7 @@
             
       return {
          onTimeChanged: onTimeChanged
-      }
+      };
       
       function onTimeChanged(event) {
          var currentTime = event.time;
@@ -41,24 +41,24 @@
          if(activated && time) {
             if(time.hours === currentTime.hours && time.minutes === currentTime.minutes) {
                ringer.play();
-               alarm.setProps({ ringing: true })
+               alarm.setProps({ ringing: true });
             } 
          } else {
             ringer.stop();
-            alarm.setProps({ ringing: false })
+            alarm.setProps({ ringing: false });
          }
       }
       
       function alarmTimeChanged(event) {
          var timeString = event.target.value;
-         var timeArray = timeString.split(':')
+         var timeArray = timeString.split(':');
          var hours = +timeArray[0];
          var minutes = + timeArray[1];
          
          time = {
             hours: hours,
             minutes: minutes
-         }
+         };
       }
       
       function activateChanged(event) {

@@ -11,7 +11,7 @@
          eventBus.publish({
             name: 'TimeChanged',
             time: currentTime()
-         })
+         });
       },500);
       
       return currentTime;

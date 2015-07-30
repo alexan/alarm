@@ -19,7 +19,7 @@
 
       return {
          onTimeChanged: onTimeChanged
-      }
+      };
 
 
       function onTimeChanged(event) {
