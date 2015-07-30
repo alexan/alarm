@@ -1,0 +1,41 @@
+(function() {
+   
+   mom.createModule('time')
+      .creator(timeCreator);
+   
+   function timeCreator(element) {
+      var Time = React.createClass({displayName: "Time", 
+         render: function() {
+            return React.createElement("div", null,  this.state.hours, ":",  this.state.minutes, ":",  this.state.seconds);
+         }           
+      });
+
+      var time = React.render(
+         React.createElement(Time, null),
+         element
+      );
+      
+      console.log("test");
+      
+      return {
+         onTimeChanged: onTimeChanges
+      }
+      
+      
+      function onTimeChanged(event) {
+         time.setState(event.time);
+      }
+      
+      
+      function formatTime(i) {
+         if (i<10) {
+            i = "0" + i;
+         }  // add zero in front of numbers < 10
+         
+         return i;
+      }
+}
+
+
+   
+})();
