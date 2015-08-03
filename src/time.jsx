@@ -8,7 +8,7 @@
       var Time = React.createClass({ 
          getInitialState: currentTime,
          render: function() {
-            return <div>{ formatTime(this.state.hours) }:{ formatTime(this.state.minutes) }:{ this.state.seconds }</div>;
+            return <div>{ this.state.hours }:{ formatTime(this.state.minutes) }:{ formatTime(this.state.seconds) }</div>;
          }           
       });
 
@@ -30,7 +30,7 @@
       function formatTime(i) {
          if (i<10) {
             i = "0" + i;
-         }  // add zero in front of numbers < 10
+         }
 
          return i;
       }

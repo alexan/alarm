@@ -12,7 +12,7 @@
             name: 'TimeChanged',
             time: currentTime()
          });
-      },500);
+         },1000/60);
       
       return currentTime;
       
@@ -21,11 +21,13 @@
          var hours = now.getHours();
          var minutes = now.getMinutes();
          var seconds = now.getSeconds();
+         var millis = now.getMilliseconds();
          
          return {
             hours: hours,
             minutes: minutes,
-            seconds: seconds
+            seconds: seconds,
+            millis: millis
          };
       }
    }
