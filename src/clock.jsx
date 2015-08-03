@@ -98,10 +98,10 @@
                        style={alarmStyle}
                        onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} onMouseMove={this.onMouseMove} 
                        onMouseOut={this.onMouseUp}/>
-                       /*      <line x1="100" y1="100" 
+                             <line x1="100" y1="100" 
                        x2={getX(6 * (this.state.time.seconds + this.state.time.millis / 1000), 100, 0.95,  100)} 
                        y2={getY(6 * (this.state.time.seconds + this.state.time.millis / 1000), 100, 0.95,  100)}  
-                       style={secondStyle}/>*/
+                       style={secondStyle}/>
 
                </g>
             </svg>
